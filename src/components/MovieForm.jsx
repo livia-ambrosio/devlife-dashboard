@@ -22,10 +22,14 @@ function MovieForm({ onAdicionar }) {
       className="bg-slate-800 rounded-xl shadow-md p-5 mb-8 flex flex-wrap gap-3 items-end border border-slate-700"
     >
       <div className="flex-1 min-w-[200px]">
-        <label className="block text-sm font-semibold text-slate-300 mb-1">
+        <label 
+          htmlFor="campo-titulo-filme" 
+          className="block text-sm font-semibold text-slate-300 mb-1"
+        >
           Novo Filme / Série
         </label>
         <input
+          id="campo-titulo-filme"
           type="text"
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
@@ -35,10 +39,14 @@ function MovieForm({ onAdicionar }) {
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-slate-300 mb-1">
+        <label 
+          htmlFor="campo-genero-filme" 
+          className="block text-sm font-semibold text-slate-300 mb-1"
+        >
           Gênero
         </label>
         <select
+          id="campo-genero-filme"
           value={genero}
           onChange={(e) => setGenero(e.target.value)}
           className="bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
@@ -52,10 +60,14 @@ function MovieForm({ onAdicionar }) {
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-slate-300 mb-1">
+        <label 
+          htmlFor="campo-avaliacao-filme" 
+          className="block text-sm font-semibold text-slate-300 mb-1"
+        >
           Prioridade / Expectativa
         </label>
         <select
+          id="campo-avaliacao-filme"
           value={avaliacao}
           onChange={(e) => setAvaliacao(e.target.value)}
           className="bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
@@ -68,7 +80,7 @@ function MovieForm({ onAdicionar }) {
 
       <button
         type="submit"
-        className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2 rounded-lg transition-colors cursor-pointer"
+        className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2 rounded-lg transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
       >
         + Adicionar
       </button>
